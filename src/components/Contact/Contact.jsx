@@ -8,8 +8,7 @@ import white_arrow from '../../assets/white-arrow.png'
 const Contact = () => {
 
   const [result, setResult] = React.useState("");
-
-  const onSubmit = async (event) => {
+   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
@@ -31,12 +30,7 @@ const Contact = () => {
       setResult(data.message);
     }
   };
-
-
-
-
-
-  return (
+   return (
     <div className='contact'>
       <div className="contact-col">
         <h3>Send us a message <img src={msg_icon} alt=""/></h3>
@@ -64,5 +58,4 @@ const Contact = () => {
     </div>
   )
 }
-
 export default Contact
